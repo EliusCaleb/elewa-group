@@ -1,0 +1,49 @@
+
+
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .article {
+    width: calc(33.33% - 1rem);
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    .image {
+      margin-bottom: 1rem;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .content {
+      flex-grow: 1;
+
+      .timestamp {
+        font-size: 0.8rem;
+        color: $gray-600;
+        margin-bottom: 0.5rem;
+      }
+
+      .title {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .body {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+      }
+
+      .read-time {
+        font-size: 0.8rem;
+        color: gray;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<div class="article-list">
+    <div class="article" *ngFor="let article of articles">
+      <div class="image">
+        <img srcset="{{ article.image }} 1x, {{ article.image }} 2x" alt="{{ article.title }}">
+      </div>
+      <div class="content">
+        <div class="timestamp">{{ article.timestamp | date: 'MMM d, y' }}</div>
+        <h3 class="title">{{ article.title }}</h3>
+        <div class="body">{{ article.body }}</div>
+        <div class="read-time">{{ calculateReadTime(article.body.split(' ').length) }} min read</div>
+      </div>
+    </div>
+</div>
